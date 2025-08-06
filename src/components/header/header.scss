@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    background-color: #fff8ef;
+    border-bottom: 2px solid #0000001f;
+    box-shadow: 0px -8px 13px gray;
+    
+    .imgLogo {
+        padding: 5px;
+    }
+    
+    .linkContainer {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        gap: 15px;
+    }
+    
+    .a {
+        color: black;
+        font-size: 1.5rem;
+    }
+    
+    .aSelected {
+        text-decoration: underline;
+    }
+}

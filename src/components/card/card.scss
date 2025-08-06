@@ -1,0 +1,121 @@
+.card {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  gap: 15px;
+  min-width: 49%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+
+  .img {
+    cursor: pointer;
+    width: 212px;
+  }
+
+  .textsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    padding-top: 5px;
+    padding-bottom: 10px;
+  }
+
+  .cardTitleContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .titleCategoryContainer {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+  }
+
+  .title {
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+
+  .category {
+    color: gray;
+    font-size: 1.3rem;
+  }
+
+  .imgChili {
+    width: 24px;
+  }
+
+  .ageContainer {
+    margin-top: 10px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .age {
+    border: 1px solid gray;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+
+  .synopsis {
+    margin-right: 7%;
+    --line-clamp: 4;
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .synopsis::before {
+    content: "";
+    float: right;
+    height: calc((var(--line-clamp) - 1) * 1lh);
+  }
+
+  .readMore {
+    clear: both;
+    float: right;
+    margin-right: 7px;
+    text-decoration: underline;
+  }
+
+  .buttonsContainer {
+    flex: 1;
+    display: flex;
+    gap: 5px;
+    align-items: flex-end;
+    margin-top: 10px;
+  }
+
+  .button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--background-button-dark);
+    border: 1px solid var(--border-button-dark);
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: white;
+  }
+
+  .button:hover {
+    background-color: var(--background-button-dark-hover);
+  }
+
+  .button:active {
+    background-color: var(--background-button-dark-active);
+  }
+
+  .buttonImage {
+    border-radius: 4px;
+    width: 20px;
+  }
+}
