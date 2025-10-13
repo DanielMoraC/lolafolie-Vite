@@ -8,7 +8,8 @@ import './accordion.scss'
 import { Card } from '../card/card'
 
 interface AccordionProps {
-    saga: Saga
+    saga: Saga,
+    only: boolean
 }
 
 interface AccordionBodyProps {
@@ -29,32 +30,43 @@ export function AccordionBody({ saga, books }: AccordionBodyProps) {
     )
 }
 
-export function Accordion({ saga }: AccordionProps) {
+export function Accordion({ saga, only }: AccordionProps) {
 
     const [open, setOpen] = useState<boolean>(true)
     const [maxHeight, setHeight] = useState<string>("100000000px")
 
     useEffect(() => {
         setTimeout(() => {
-            setHeight(`${document.querySelector('.accordionBody') ? document.querySelector('.accordionBody')?.clientHeight : 0}px`);
+            checkHeight()
+
+            window.addEventListener('resize', () => {
+                setHeight('unset');
+                checkHeight()
+            })
         }, 100);
     }, [])
 
-    function onAccordionClick() {
-        setOpen(!open);
+    const checkHeight = () => {
+        setHeight(`${document.querySelector('.accordionBody') ? document.querySelector('.accordionBody')?.clientHeight : 0}px`);
+    }
+
+    const onAccordionClick = () => {
+        if (!only) {
+            setOpen(!open);
+        }
     }
 
     return (
         <div className='accordionContainer'>
-            <div className='accordionHeader'>
+            <div className='accordionHeader' style={{ cursor: only ? 'default' : 'pointer' }}>
                 <div>
                     <Link key={saga?.title} to={`/saga/${saga?.id}`}
                         className='line-clamp-1 title'>
-                        <span className='accordionTitle'>{saga?.title}</span>
+                        <span className='text-3xl font-bold'>{saga?.title}</span>
                     </Link>
                 </div>
                 <div className='accordionArrow' onClick={onAccordionClick}>
-                    <span className='accordionDesc'>{saga?.category}</span>
+                    <span className='accordionDesc text-xl text-gray-500'>{saga?.category}</span>
                     {
                         open ?
                             <BookOpenText color='black' />

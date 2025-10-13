@@ -20,7 +20,8 @@
                     "goodreads": "https://www.goodreads.com/book/show/221516180-entre-tu-espacio-y-el-m-o",
                     "category": "Romance",
                     "spice": 2,
-                    "img": "/libro.png",
+                    "img": "/libro-img.png",
+                    "front": "/entre-tu-espacio-y-el-mio-front.png",
                     "isbn": "979-8344882154",
                     "publishDate": "2024-11-19"
                 },
@@ -28,16 +29,11 @@
                     "id": "test",
                     "title": "Test",
                     "synopsis": "A Ivett se le ha agotado el tiempo que puede permanecer en la residencia en la que vive y debe marcharse el día de su cumpleaños al haber superado el límite de edad que establece la normativa.<br>A Dorian la casera de su amigo lo ha echado del piso tras haberlo pillado durmiendo en el sofá.<br>A Ivett y a Dorian les han alquilado los mismos diez metros cuadrados y, por imposible que parezca, se ven en la necesidad de compartir un espacio imposible en el que sus inseguridades y frustraciones van a tener que aprender a convivir.<br>Dos desconocidos.<br>Diez metros cuadrados.<br>Y, por supuesto, París.",
-                    "age": "+17",
                     "amazon": "https://amzn.eu/d/64SuCVe",
-                    "goodreads": "https://www.goodreads.com/book/show/221516180-entre-tu-espacio-y-el-m-o",
                     "category": [
                         "Romance"
                     ],
-                    "spice": 1,
-                    "img": "/libro.png",
-                    "isbn": "979-8344882154",
-                    "publishDate": "2024-11-19"
+                    "img": "/libro-img.png"
                 }
             ]
         },
@@ -56,7 +52,8 @@
                     "goodreads": "https://www.goodreads.com/book/show/230416432-bandera-a-cuadros",
                     "category": "Romance - Deporte",
                     "spice": 1,
-                    "img": "/libro.png",
+                    "img": "/libro-img.png",
+                    "font": "/bandera-a-cuadros-front.png",
                     "isbn": "979-8315254577",
                     "publishDate": "2025-03-29"
                 }

@@ -1,61 +1,49 @@
 .accordionContainer {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
 
-    .accordionHeader {
-        cursor: pointer;
-        display: flex;
-        flex: 1;
-        border-bottom: 1px solid #0000001f;
-    }
-    
-    .accordionTitle {
-        font-size: 2rem;
-        font-weight: bold;
-    }
-    
-    .accordionDesc {
-        font-size: 1.5rem;
-        padding-left: 5px;
-        color: gray;
-    }
-    
-    .accordionArrow {
-        flex: 1;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 3px;
-    }
-    
-    .accordionBody {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 15px;
-        padding-left: 10px;
-        padding-right: 10px;
-        transition: max-height .5s ease-in,
-            padding-top .5s,
-            padding-bottom .5s,
-            overflow 2s;
-    }
-    
-    .accordionBodyOpen {
-        padding-top: 17px;
-        padding-bottom: 17px;
-        overflow: hidden;
-    }
-    
-    .accordionBodyClosed {
-        max-height: 0 !important;
-        padding-top: 0;
-        padding-bottom: 0;
-        overflow: hidden;
-        transition: max-height .5s ease-out,
-            padding-top .25s .25s,
-            padding-bottom .25s .25s,
-            overflow .5s;
-    }
+  .accordionHeader {
+    display: flex;
+    flex: 1;
+    border-bottom: 1px solid #0000001f;
+  }
+
+  .accordionDesc {
+    padding-left: 5px;
+  }
+
+  .accordionArrow {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3px;
+  }
+
+  .accordionBody {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: max-height 0.5s ease-in, padding-top 0.5s, padding-bottom 0.5s,
+      overflow 2s;
+  }
+
+  .accordionBodyOpen {
+    padding-top: 17px;
+    padding-bottom: 17px;
+    overflow: hidden;
+  }
+
+  .accordionBodyClosed {
+    max-height: 0 !important;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding-top 0.25s 0.25s,
+      padding-bottom 0.25s 0.25s, overflow 0.5s;
+  }
 }

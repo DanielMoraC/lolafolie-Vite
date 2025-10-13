@@ -2,7 +2,7 @@
 
 import { Link } from "react-router";
 import type { Book } from "../../types";
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './card.scss'
 
 interface CardProps {
@@ -41,10 +41,6 @@ export function Spice({ spice }: SpiceProps) {
 export function Card({ sagaPage, saga, card }: CardProps) {
     const [synopsis] = useState(card.synopsis)
 
-    useEffect(() => {
-
-    }, [])
-
     return (
         <div className='shadow-md card'>
             <div className='img'>
@@ -56,37 +52,37 @@ export function Card({ sagaPage, saga, card }: CardProps) {
                 <div className='cardTitleContainer'>
                     <div className='titleCategoryContainer'>
                         <Link key={card.title} to={`/book/${saga}/${card.id}`}
-                            className='line-clamp-1 title'>
+                            className='line-clamp-1 title font-bold text-2xl'>
                             <p>{card.title}</p>
                         </Link>
-                        {sagaPage && <span className='category'>{card.category}</span>}
+                        {sagaPage && <span className='text-gray-500 text-lg'>{card.category}</span>}
                     </div>
                     <div className='ageContainer'>
-                        {sagaPage && <Spice spice={card?.spice}></Spice>}
-                        <span className='age'>{card.age}</span>
+                        {sagaPage && card?.spice && <Spice spice={card?.spice}></Spice>}
+                        {card?.age && <span className='age text-xs'>{card.age}</span>}
                     </div>
                 </div>
                 <div className='synopsis'>
                     <p>
                         <Link key={card.title} to={`/book/${saga}/${card.id}`}>
-                            <ReadMore></ReadMore>
+                            {/* <ReadMore></ReadMore> */}
                         </Link>
-                        <span dangerouslySetInnerHTML={{ __html: synopsis }}></span>
+                        <span className="text-base" dangerouslySetInnerHTML={{ __html: synopsis }}></span>
                     </p>
                 </div>
                 <div className='buttonsContainer'>
                     <Link key={card.amazon} to={card.amazon} target="_blank">
-                        <button className='button'>
+                        <button className='button text-neutral-50'>
                             <img src="/amazon_ico.png" alt="Amazon" className='buttonImage' />
                             Amazon
                         </button>
                     </Link>
-                    <Link key={card.goodreads} to={card.goodreads} target="_blank">
-                        <button className='button'>
+                    {card?.goodreads && <Link key={card.goodreads} to={card.goodreads} target="_blank">
+                        <button className='button text-neutral-50'>
                             <img src="/goodreads_ico.png" alt="Goodreads" className='buttonImage' />
                             Goodreads
                         </button>
-                    </Link>
+                    </Link>}
                 </div>
             </div>
         </div>

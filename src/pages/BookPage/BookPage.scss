@@ -1,5 +1,90 @@
 .bookPage {
   padding: 24px 89px;
   border-bottom: 2px solid #0000001f;
-  height: 85dvh;
+  min-height: 85dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .bookContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+
+    aside {
+      .buttonsContainer {
+        flex: 1;
+        display: flex;
+        gap: 5px;
+        align-items: flex-end;
+        margin-top: 10px;
+
+        .button {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          background-color: var(--background-button-dark);
+          border: 1px solid var(--border-button-dark);
+          padding: 5px 10px;
+          border-radius: 4px;
+          color: white;
+
+          &:hover {
+            background-color: var(--background-button-dark-hover);
+          }
+
+          &:active {
+            background-color: var(--background-button-dark-active);
+          }
+
+          .buttonImage {
+            border-radius: 4px;
+            width: 20px;
+          }
+        }
+      }
+    }
+
+    .infoBookContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .age {
+          border: 1px solid gray;
+          border-radius: 4px;
+          padding: 5px;
+          font-size: 0.8rem;
+        }
+      }
+
+      .info {
+        .category {
+        }
+
+        .synopsis {
+        }
+      }
+    }
+  }
+
+  .bookHeader {
+    border-bottom: 1px solid #0000001f;
+
+    .otherBook {
+      font-size: 2rem;
+    }
+  }
+
+  .otherBooksContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }

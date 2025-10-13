@@ -15,13 +15,10 @@ export default function SagaPage() {
     const [otherSagas, setOtherSagas] = useState<Saga[] | undefined>()
 
     useEffect(() => {
-        fetch('/public/config.json')
+        fetch('/config.json')
             .then(async res => res.json())
             .then(res => {
                 setSagaFunction(res.sagas)
-                // setSaga(res.sagas.find((saga: Saga) => saga.id == params.sagaID))
-                // setOtherSagas(res.sagas.filter((saga: Saga) => saga.id != params.sagaID))
-                // document.title = saga?.title ? saga.title + ' - Lola Folie' : 'Lola Folie'
             })
     }, [params])
 
@@ -37,11 +34,11 @@ export default function SagaPage() {
             <main className='sagaPage'>
                 <div>
                     <div className='sagaHeader'>
-                        <span className='sagaTitle'>{saga?.title}</span>
+                        <h1 className='text-4xl font-bold'>{saga?.title}</h1>
                     </div>
 
                     <div className='sagaContainer'>
-                        <p className='sagaDescription'>{saga?.description}</p>
+                        <p className='text-xl'>{saga?.description}</p>
                         {saga?.books?.map((book: Book) => {
                             return (
                                 <Card key={book?.id} saga={saga?.id} card={book} sagaPage={true}></Card>
@@ -50,24 +47,26 @@ export default function SagaPage() {
                     </div>
                 </div>
 
-                <div>
-                    <div className='sagaHeader'>
-                        <span className='otherSaga'>Otras sagas</span>
-                    </div>
+                {otherSagas && otherSagas?.length > 0 &&
+                    <div className="otherSaga">
+                        <div className='sagaHeader'>
+                            <span className='text-2xl'>Otras sagas</span>
+                        </div>
 
-                    <div className='otherSagasContainer'>
-                        {otherSagas?.map((saga) => {
-                            return (
-                                <Link key={saga?.title} to={`/saga/${saga?.id}`}>
-                                    <div className='linkContainer'>
-                                        <span className='otherSagaTitle'>{saga?.title}</span>
-                                        <span className='otherSagaCategory'>{saga?.category}</span>
-                                    </div>
-                                </Link>
-                            )
-                        })}
+                        <div className='otherSagasContainer'>
+                            {otherSagas?.map((saga) => {
+                                return (
+                                    <Link key={saga?.title} to={`/saga/${saga?.id}`}>
+                                        <div className='linkContainer'>
+                                            <span className='text-xl'>{saga?.title}</span>
+                                            <span className='text-lg text-gray-500'>{saga?.category}</span>
+                                        </div>
+                                    </Link>
+                                )
+                            })}
+                        </div>
                     </div>
-                </div>
+                }
             </main>
             <Footer />
         </>

@@ -12,7 +12,7 @@ export default function HomePage() {
     const [sagas, setSagas] = useState<Saga[]>([])
 
     useEffect(() => {
-        fetch('/public/config.json')
+        fetch('/config.json')
             .then(async res => res.json())
             .then(res => setSagas(res.sagas))
         document.title = 'Lola Folie'
@@ -25,7 +25,7 @@ export default function HomePage() {
                 <main>
                     {sagas?.map((saga: Saga) => {
                         return (
-                            <Accordion key={saga?.id} saga={saga}></Accordion>
+                            <Accordion key={saga?.id} saga={saga} only={sagas.length == 1}></Accordion>
                         )
                     })}
                 </main>

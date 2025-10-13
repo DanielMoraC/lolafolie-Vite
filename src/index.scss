@@ -1,5 +1,3 @@
-@import "tailwindcss";
-
 :root {
   --background: linear-gradient(#fffbf7, #fff5eb);
   --foreground: #171717;
@@ -32,7 +30,6 @@ body {
   --background-button-dark-hover: #2c2c2c;
   --background-button-dark-active: black;
 }
-
 
 .google-sans-code {
   font-family: "Google Sans Code", monospace;

@@ -6,6 +6,7 @@ export default function NotFoundPage() {
         <>
             <h1>404 No se ha encontrado la página</h1>
             <Link to="/">Inicio</Link>
+            <Link to="/">Sobre mi</Link>
         </>
     )
 }

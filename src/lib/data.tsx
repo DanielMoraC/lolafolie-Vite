@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import type { Saga } from "../types";
 
-const path = '/public/config.json'
+const path = '/config.json'
 
 export async function getSagas() {
     const [sagas, setSagas] = useState<Saga[]>([])

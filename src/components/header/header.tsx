@@ -25,8 +25,8 @@ export function Header() {
                 {routes.map((route) => {
                     return (
                         <Link key={route.name} to={route.href}
-                            className={`a ${path.pathname == route.href && 'aSelected'}`}>
-                            <p>{route.name}</p>
+                            className={`text-black text-2xl ${path.pathname == route.href && 'aSelected'}`}>
+                            <span className={`hover:text-rose-900 active:text-rose-800 ${path.pathname == route.href && 'aSelected text-rose-950'}`}>{route.name}</span>
                         </Link>
                     )
                 })}

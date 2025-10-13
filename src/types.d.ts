@@ -10,12 +10,13 @@ export interface Book {
     id: string,
     title: string,
     synopsis: string,
-    age: string,
+    age: string | undefined,
     amazon: string,
-    goodreads: string,
+    goodreads: string | undefined,
     category: string[],
-    spice: number,
+    spice: number | undefined,
     img: string,
-    isbn: string,
-    publishDate: string,
+    front: string
+    isbn: string | undefined,
+    publishDate: string | undefined,
 }
