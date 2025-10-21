@@ -39,21 +39,21 @@ export function Spice({ spice }: SpiceProps) {
 }
 
 export function Card({ sagaPage, saga, card }: CardProps) {
-    const [synopsis] = useState(card.synopsis)
+    const [synopsis] = useState(`<p>${card.synopsis.replaceAll('|', '</p><p>')}</p>`)
 
     return (
         <div className='shadow-md card'>
-            <div className='img'>
+            <div className="img">
                 <Link key={card.title} to={`/book/${saga}/${card.id}`}>
-                    <img src={card.img} alt={card.title} className='img' />
+                    <img src={card.img} alt={card.title} />
                 </Link>
             </div>
             <div className='textsContainer'>
                 <div className='cardTitleContainer'>
                     <div className='titleCategoryContainer'>
                         <Link key={card.title} to={`/book/${saga}/${card.id}`}
-                            className='line-clamp-1 title font-bold text-2xl'>
-                            <p>{card.title}</p>
+                            className='line-clamp-1 title font-bold text-xl'>
+                            {sagaPage ? <h2 className="hover:underline">{card.title}</h2> : <h3 className="hover:underline">{card.title}</h3>}
                         </Link>
                         {sagaPage && <span className='text-gray-500 text-lg'>{card.category}</span>}
                     </div>

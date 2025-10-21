@@ -23,6 +23,7 @@ export default function HomePage() {
             <Header />
             <div className='homePage'>
                 <main>
+                    <h1 className="h1Generic">Lola Folie - Autora de novela romántica</h1>
                     {sagas?.map((saga: Saga) => {
                         return (
                             <Accordion key={saga?.id} saga={saga} only={sagas.length == 1}></Accordion>

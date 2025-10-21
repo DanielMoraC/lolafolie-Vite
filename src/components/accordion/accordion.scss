@@ -17,8 +17,7 @@
     flex: 1;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding-top: 3px;
+    align-items: flex-end;
   }
 
   .accordionBody {
@@ -28,8 +27,8 @@
     gap: 15px;
     padding-left: 10px;
     padding-right: 10px;
-    transition: max-height 0.5s ease-in, padding-top 0.5s, padding-bottom 0.5s,
-      overflow 2s;
+    transition: max-height 0.5s ease-in-out, padding-top 0.5s,
+      padding-bottom 0.5s, overflow 2s;
   }
 
   .accordionBodyOpen {

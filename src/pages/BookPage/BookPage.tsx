@@ -34,17 +34,14 @@ export function BookPage() {
 
     useEffect(() => {
         setDateFormated(book?.publishDate && formatDateBook({ date: book?.publishDate }))
-        setSynopsis(book?.synopsis)
+        setSynopsis(`<p>${book?.synopsis.replaceAll('|', '</p><p>')}</p>`)
         document.title = book?.title ? book.title + ' - Lola Folie' : 'Lola Folie'
     }, [book])
 
     return (
         <>
             <Header />
-            <main className='bookPage'>
-                {/* <h2>{saga?.title}</h2>
-                <h1>{book?.title}</h1> */}
-
+            <div className='bookPage'>
                 <div className="bookContainer">
                     <aside>
                         <img src={book?.front} alt={book?.title} />
@@ -62,46 +59,51 @@ export function BookPage() {
                                 </button>
                             </Link>}
                         </div>
-                        {book?.isbn && <p className="isbnDate">ISBN: <span>{book?.isbn}</span></p>}
-                        {dateFormated && <p className="isbnDate">Fecha de publicación: <span className="capitalize">{dateFormated}</span></p>}
+                        {book?.isbn && <p><span className="text-gray-500">ISBN: </span><span>{book?.isbn}</span></p>}
+                        {dateFormated && <p><span className="text-gray-500">Fecha de publicación: </span><span className="capitalize">{dateFormated}</span></p>}
                     </aside>
 
-                    <div className="infoBookContainer">
+                    <main className="infoBookContainer">
                         <div className="header">
-                            <h1>{book?.title}</h1>
-                            <p> - {saga?.title}</p>
-                            {book?.spice && <Spice spice={book?.spice}></Spice>}
-                            {book?.age && <span className='age'>{book.age}</span>}
+                            <h1 className='text-2xl font-bold'>{book?.title}</h1>
+                            <span className="text-lg text-gray-500">- </span>
+                            <Link key={saga?.id} to={`/saga/${saga?.id}`}>
+                                <span className='text-lg text-gray-500 hover:underline'> {saga?.title}</span>
+                            </Link>
                         </div>
 
                         <div className="info">
-                            <p className="category">{book?.category}</p>
+                            <div className="infoBook">
+                                <span className="text-lg text-gray-500">{book?.category}</span>
+                                <div className="ageContainer">
+                                    {book?.age && <span className='age'>{book.age}</span>}
+                                    {book?.spice && <Spice spice={book?.spice}></Spice>}
+                                </div>
+                            </div>
                             <div className="synopsis" dangerouslySetInnerHTML={{ __html: synopsis! }}></div>
                         </div>
-                    </div>
+                    </main>
                 </div>
 
                 {otherBooks && otherBooks.length > 0 ?
-                    <div>
+                    <div className="otherBooksContainer">
                         <div className='bookHeader'>
-                            <span className='otherBook'>Otros libros de la misma saga</span>
+                            <h2 className='text-xl'>Otros libros de la misma saga</h2>
                         </div>
 
-                        <div className='otherBooksContainer'>
-                            {/* {otherSagas?.map((saga) => {
-                                    return (
-                                        <Link key={saga?.title} to={`/saga/${saga?.id}`}>
-                                            <div className='linkContainer'>
-                                                <span className='otherSagaTitle'>{saga?.title}</span>
-                                                <span className='otherSagaCategory'>{saga?.category}</span>
-                                            </div>
-                                        </Link>
-                                    )
-                                })} */}
+                        <div className='otherBooks'>
+                            {otherBooks?.map((book) => {
+                                return (
+                                    <Link key={book?.title} to={`/book/${saga?.id}/${book?.id}`}>
+                                        <img src={book?.front} alt={book?.title} />
+                                        <span className='text-lg font-bold'>{book?.title}</span>
+                                    </Link>
+                                )
+                            })}
                         </div>
                     </div>
                     : <></>}
-            </main>
+            </div>
             <Footer />
         </>
     )

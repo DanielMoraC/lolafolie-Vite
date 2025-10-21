@@ -34,7 +34,7 @@ export default function SagaPage() {
             <main className='sagaPage'>
                 <div>
                     <div className='sagaHeader'>
-                        <h1 className='text-4xl font-bold'>{saga?.title}</h1>
+                        <h1 className='text-3xl font-bold'>{saga?.title}</h1>
                     </div>
 
                     <div className='sagaContainer'>
@@ -50,7 +50,7 @@ export default function SagaPage() {
                 {otherSagas && otherSagas?.length > 0 &&
                     <div className="otherSaga">
                         <div className='sagaHeader'>
-                            <span className='text-2xl'>Otras sagas</span>
+                            <h3 className='text-2xl'>Otras sagas</h3>
                         </div>
 
                         <div className='otherSagasContainer'>

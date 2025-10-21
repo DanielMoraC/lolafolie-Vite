@@ -47,7 +47,7 @@ export function Accordion({ saga, only }: AccordionProps) {
     }, [])
 
     const checkHeight = () => {
-        setHeight(`${document.querySelector('.accordionBody') ? document.querySelector('.accordionBody')?.clientHeight : 0}px`);
+        setHeight(`${document.querySelector('.accordionBody') ? document.querySelector('.accordionBody')?.scrollHeight : 0}px`);
     }
 
     const onAccordionClick = () => {
@@ -62,11 +62,11 @@ export function Accordion({ saga, only }: AccordionProps) {
                 <div>
                     <Link key={saga?.title} to={`/saga/${saga?.id}`}
                         className='line-clamp-1 title'>
-                        <span className='text-3xl font-bold'>{saga?.title}</span>
+                        <h2 className='text-2xl font-bold hover:underline'>{saga?.title}</h2>
                     </Link>
                 </div>
                 <div className='accordionArrow' onClick={onAccordionClick}>
-                    <span className='accordionDesc text-xl text-gray-500'>{saga?.category}</span>
+                    <span className='accordionDesc text-lg text-gray-500'>{saga?.category}</span>
                     {
                         open ?
                             <BookOpenText color='black' />

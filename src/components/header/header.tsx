@@ -21,16 +21,16 @@ export function Header() {
                 height={41}
                 className={styles.img}
             /> */}
-            <div className='linkContainer'>
+            <nav className='linkContainer'>
                 {routes.map((route) => {
                     return (
                         <Link key={route.name} to={route.href}
-                            className={`text-black text-2xl ${path.pathname == route.href && 'aSelected'}`}>
+                            className={`text-black text-lg ${path.pathname == route.href && 'aSelected'}`}>
                             <span className={`hover:text-rose-900 active:text-rose-800 ${path.pathname == route.href && 'aSelected text-rose-950'}`}>{route.name}</span>
                         </Link>
                     )
                 })}
-            </div>
+            </nav>
         </header >
     )
 }

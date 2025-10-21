@@ -1,8 +1,14 @@
 {
     "redes": {},
     "aboutMe": {
-        "text": "<p>Encantada, soy Lola Folie.</p><p>Por circunstancias de la vida nací en Córdoba (España), pero siempre he vivido en los libros que leía.</p><p>Con pasión por la lectura y las letras empecé a escribir en una época de mucho tiempo libre, la pandemia.</p><p>Me gusta escribir romántica con spicy, pero algunas veces mataré a personajes, depende de como de feliz esté con mi círculo más cercano en el momento que escriba.</p><p>Un saludo y gracias por visitar mi web.</p>",
-        "image": ""
+        "text": "Encantada, soy Lola Folie.|Por circunstancias de la vida nací en Córdoba (España), pero siempre he vivido en los libros que leía.|Con pasión por la lectura y las letras empecé a escribir en una época de mucho tiempo libre, la pandemia.|Me gusta escribir romántica con spicy, pero algunas veces mataré a personajes, depende de como de feliz esté con mi círculo más cercano en el momento que escriba.|Un saludo y gracias por visitar mi web.",
+        "image": "/foto-about.png",
+        "rrss": {
+            "instagram": "https://www.instagram.com/lolafolie_autora/",
+            "amazon": "https://www.amazon.es/s?rh=p_27%3ALola%2BFolie",
+            "goodreads": "https://www.goodreads.com/author/show/53116842.Lola_Folie",
+            "threads": "https://www.threads.com/@lolafolie_autora"
+        }
     },
     "sagas": [
         {
@@ -14,7 +20,7 @@
                 {
                     "id": "entre-tu-espacio-y-el-mio",
                     "title": "Entre tu espacio y el mío",
-                    "synopsis": "A Ivett se le ha agotado el tiempo que puede permanecer en la residencia en la que vive y debe marcharse el día de su cumpleaños al haber superado el límite de edad que establece la normativa.<br>A Dorian la casera de su amigo lo ha echado del piso tras haberlo pillado durmiendo en el sofá.<br>A Ivett y a Dorian les han alquilado los mismos diez metros cuadrados y, por imposible que parezca, se ven en la necesidad de compartir un espacio imposible en el que sus inseguridades y frustraciones van a tener que aprender a convivir.<br>Dos desconocidos.<br>Diez metros cuadrados.<br>Y, por supuesto, París.",
+                    "synopsis": "A Ivett se le ha agotado el tiempo que puede permanecer en la residencia en la que vive y debe marcharse el día de su cumpleaños al haber superado el límite de edad que establece la normativa.|A Dorian la casera de su amigo lo ha echado del piso tras haberlo pillado durmiendo en el sofá.|A Ivett y a Dorian les han alquilado los mismos diez metros cuadrados y, por imposible que parezca, se ven en la necesidad de compartir un espacio imposible en el que sus inseguridades y frustraciones van a tener que aprender a convivir.|Dos desconocidos.|Diez metros cuadrados.|Y, por supuesto, París.",
                     "age": "+17",
                     "amazon": "https://amzn.eu/d/64SuCVe",
                     "goodreads": "https://www.goodreads.com/book/show/221516180-entre-tu-espacio-y-el-m-o",
@@ -28,12 +34,11 @@
                 {
                     "id": "test",
                     "title": "Test",
-                    "synopsis": "A Ivett se le ha agotado el tiempo que puede permanecer en la residencia en la que vive y debe marcharse el día de su cumpleaños al haber superado el límite de edad que establece la normativa.<br>A Dorian la casera de su amigo lo ha echado del piso tras haberlo pillado durmiendo en el sofá.<br>A Ivett y a Dorian les han alquilado los mismos diez metros cuadrados y, por imposible que parezca, se ven en la necesidad de compartir un espacio imposible en el que sus inseguridades y frustraciones van a tener que aprender a convivir.<br>Dos desconocidos.<br>Diez metros cuadrados.<br>Y, por supuesto, París.",
+                    "synopsis": "A Ivett se le ha agotado el tiempo que puede permanecer en la residencia en la que vive y debe marcharse el día de su cumpleaños al haber superado el límite de edad que establece la normativa.|A Dorian la casera de su amigo lo ha echado del piso tras haberlo pillado durmiendo en el sofá.|A Ivett y a Dorian les han alquilado los mismos diez metros cuadrados y, por imposible que parezca, se ven en la necesidad de compartir un espacio imposible en el que sus inseguridades y frustraciones van a tener que aprender a convivir.|Dos desconocidos.|Diez metros cuadrados.|Y, por supuesto, París.",
                     "amazon": "https://amzn.eu/d/64SuCVe",
-                    "category": [
-                        "Romance"
-                    ],
-                    "img": "/libro-img.png"
+                    "category": "Romance",
+                    "img": "/libro-img.png",
+                    "front": "/bandera-a-cuadros-front.png"
                 }
             ]
         },
@@ -46,14 +51,14 @@
                 {
                     "id": "bandera-a-cuadros",
                     "title": "Bandera a cuadros",
-                    "synopsis": "A Tobias, la culpa de ser el responsable del accidente que mantiene en coma a su amigo lo persigue sin importar lo rápido que corra.<br>Irina no sabe qué hacer con su vida. Ha terminado su tesis y se siente perdida, estancada y desganada.<br>La posibilidad de entrar a trabajar para una empresa automovilística y poner en práctica lo que lleva años investigando es la oportunidad de oro con la que no sabía que soñaba.<br>Lo que no esperaba era adentrarse en el complejo mundo de la Fórmula 1 y la presión de un deporte en el que hay mucho más en juego que el propio campeonato.<br>¿Logrará Irina cumplir con la tarea de vigilar a Tobias y convencer a su nuevo jefe de su valía? ¿Conseguirán Irina y Tobias evitar que la exigencia competitiva rompa algo que ni siquiera ha empezado?",
+                    "synopsis": "A Tobias, la culpa de ser el responsable del accidente que mantiene en coma a su amigo lo persigue sin importar lo rápido que corra.|Irina no sabe qué hacer con su vida. Ha terminado su tesis y se siente perdida, estancada y desganada.|La posibilidad de entrar a trabajar para una empresa automovilística y poner en práctica lo que lleva años investigando es la oportunidad de oro con la que no sabía que soñaba.|Lo que no esperaba era adentrarse en el complejo mundo de la Fórmula 1 y la presión de un deporte en el que hay mucho más en juego que el propio campeonato.|¿Logrará Irina cumplir con la tarea de vigilar a Tobias y convencer a su nuevo jefe de su valía? ¿Conseguirán Irina y Tobias evitar que la exigencia competitiva rompa algo que ni siquiera ha empezado?",
                     "age": "+14",
                     "amazon": "https://amzn.eu/d/iUhS0mz",
                     "goodreads": "https://www.goodreads.com/book/show/230416432-bandera-a-cuadros",
                     "category": "Romance - Deporte",
                     "spice": 1,
                     "img": "/libro-img.png",
-                    "font": "/bandera-a-cuadros-front.png",
+                    "front": "/bandera-a-cuadros-front.png",
                     "isbn": "979-8315254577",
                     "publishDate": "2025-03-29"
                 }
