@@ -1,3 +1,17 @@
+export interface Data {
+    redes: Redes
+    aboutMe: AboutMe
+    sagas: Saga[]
+}
+
+export interface AboutMe {
+    text, image: string
+}
+
+export interface Redes {
+    instagram, amazon, goodreads, threads: string
+}
+
 export interface Saga {
     id: string,
     title: string,
@@ -19,4 +33,6 @@ export interface Book {
     front: string
     isbn: string | undefined,
     publishDate: string | undefined,
+    colorUp: string | undefined,
+    colorDown: string | undefined,
 }

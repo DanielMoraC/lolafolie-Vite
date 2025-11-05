@@ -1,8 +1,22 @@
 main.notFoundPage {
-  padding: 24px 89px;
-  border-bottom: 2px solid #0000001f;
-  min-height: 85dvh;
-  display: flex;
-  flex-direction: column;
   gap: 20px;
+  align-items: center;
+  padding-top: 8%;
+
+  svg {
+    width: 200px;
+    height: auto;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+  }
 }

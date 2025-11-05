@@ -13,19 +13,15 @@ export function Header() {
 
     return (
         <header className='header'>
-            <img src="/logo.png" alt="Firma Lola Folie" className='imgLogo' />
-            {/* <Image
-                src={'/logo.png'}
-                alt="Firma Lola Folie"
-                width={128}
-                height={41}
-                className={styles.img}
-            /> */}
+            <div className='icon'>
+                {/* <img src="/ico.svg" alt="Firma Lola Folie" className='imgLogo' /> */}
+                <span className='text-3xl font-bold'>Lola Folie</span>
+            </div>
             <nav className='linkContainer'>
                 {routes.map((route) => {
                     return (
                         <Link key={route.name} to={route.href}
-                            className={`text-black text-lg ${path.pathname == route.href && 'aSelected'}`}>
+                            className={`text-black text-xl ${path.pathname == route.href && 'aSelected'}`}>
                             <span className={`hover:text-rose-900 active:text-rose-800 ${path.pathname == route.href && 'aSelected text-rose-950'}`}>{route.name}</span>
                         </Link>
                     )

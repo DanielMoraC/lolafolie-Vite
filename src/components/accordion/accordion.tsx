@@ -66,7 +66,7 @@ export function Accordion({ saga, only }: AccordionProps) {
                     </Link>
                 </div>
                 <div className='accordionArrow' onClick={onAccordionClick}>
-                    <span className='accordionDesc text-lg text-gray-500'>{saga?.category}</span>
+                    <span className='line-clamp-1 accordionDesc text-lg text-gray-500'>{saga?.category}</span>
                     {
                         open ?
                             <BookOpenText color='black' />

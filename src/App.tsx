@@ -13,6 +13,7 @@ export default function App() {
         { path: '/saga/:sagaID', element: <SagaPage />, errorElement: <NotFoundPage /> },
         { path: '/book/:sagaID/:bookID', element: <BookPage />, errorElement: <NotFoundPage /> },
         { path: '/about', element: <AbountPage />, errorElement: <NotFoundPage /> },
+        { path: '/notFound', element: <NotFoundPage />, errorElement: <NotFoundPage /> },
     ])
 
     return (

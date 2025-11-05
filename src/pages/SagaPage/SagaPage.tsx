@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Link, useParams } from "react-router"
+import { Link, useNavigate, useParams } from "react-router"
 import { Footer } from "../../components/footer/footer"
 import { Header } from "../../components/header/header"
 import type { Book, Saga } from "../../types"
@@ -7,31 +7,48 @@ import './SagaPage.scss'
 import { Card } from "../../components/card/card"
 
 export default function SagaPage() {
-
     const params = useParams<{ sagaID: string }>()
+    const navigate = useNavigate()
 
     // const sagas = getSagas();
     const [saga, setSaga] = useState<Saga | undefined>()
     const [otherSagas, setOtherSagas] = useState<Saga[] | undefined>()
 
-    useEffect(() => {
-        fetch('/config.json')
-            .then(async res => res.json())
-            .then(res => {
-                setSagaFunction(res.sagas)
+    const throw404 = () => {
+        navigate("/notFound");
+    }
+
+    const getSagas = async () => {
+        await fetch('/config.json')
+            .then(async res => {
+                const data = await res.json()
+
+                const temporalSagas = data?.sagas
+
+                setSaga(temporalSagas)
+                setSagaFunction(temporalSagas)
             })
+    }
+
+    useEffect(() => {
+        getSagas()
     }, [params])
 
     const setSagaFunction = (sagas: Saga[]) => {
-        setSaga(sagas.find((saga: Saga) => saga.id == params.sagaID))
-        setOtherSagas(sagas.filter((saga: Saga) => saga.id != params.sagaID))
-        document.title = saga?.title ? saga.title + ' - Lola Folie' : 'Lola Folie'
+        const saga = sagas.find((saga: Saga) => saga.id == params.sagaID);
+        if (saga) {
+            setSaga(sagas.find((saga: Saga) => saga.id == params.sagaID))
+            setOtherSagas(sagas.filter((saga: Saga) => saga.id != params.sagaID))
+            document.title = saga?.title ? saga.title + ' - Lola Folie' : 'Lola Folie'
+        } else {
+            throw404()
+        }
     }
 
     return (
         <>
             <Header />
-            <main className='sagaPage'>
+            <main className='sagaPage page'>
                 <div>
                     <div className='sagaHeader'>
                         <h1 className='text-3xl font-bold'>{saga?.title}</h1>
@@ -39,11 +56,13 @@ export default function SagaPage() {
 
                     <div className='sagaContainer'>
                         <p className='text-xl'>{saga?.description}</p>
-                        {saga?.books?.map((book: Book) => {
-                            return (
-                                <Card key={book?.id} saga={saga?.id} card={book} sagaPage={true}></Card>
-                            )
-                        })}
+                        <div className="books">
+                            {saga?.books?.map((book: Book) => {
+                                return (
+                                    <Card key={book?.id} saga={saga?.id} card={book} sagaPage={true}></Card>
+                                )
+                            })}
+                        </div>
                     </div>
                 </div>
 

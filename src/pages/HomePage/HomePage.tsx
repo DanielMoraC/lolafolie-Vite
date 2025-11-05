@@ -21,7 +21,7 @@ export default function HomePage() {
     return (
         <>
             <Header />
-            <div className='homePage'>
+            <div className='homePage page'>
                 <main>
                     <h1 className="h1Generic">Lola Folie - Autora de novela romántica</h1>
                     {sagas?.map((saga: Saga) => {

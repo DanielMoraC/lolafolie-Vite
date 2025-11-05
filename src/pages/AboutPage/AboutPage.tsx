@@ -15,7 +15,7 @@ export default function AbountPage() {
             .then(res => {
                 setAboutText(`<p>${res.aboutMe.text.replaceAll('|', '</p><p>')}</p>`)
                 setAboutImg(res.aboutMe.image)
-                setRrss(res.aboutMe.rrss)
+                setRrss(res.rrss)
             })
         document.title = 'Lola Folie'
 
@@ -24,20 +24,20 @@ export default function AbountPage() {
     return (
         <>
             <Header />
-            <div className='aboutPage'>
+            <div className='aboutPage page'>
                 <div className="header">
                     <div className="horizontalLine"></div>
                     <img src='/logo-vertical.png' alt="Lola Folie firma" />
                     <div className="horizontalLine"></div>
                 </div>
                 <div className="aboutMeContainer">
-                    <aside>
+                    <aside className="hidden md:flex">
                         {aboutImg && <img src={aboutImg} alt="Lola Folie foto" />}
                     </aside>
 
                     <main className="infoBookContainer">
                         <h1 className="h1Generic">Sobre Lola Folie</h1>
-                        <div className="aboutText text-lg" dangerouslySetInnerHTML={{ __html: aboutText! }}></div>
+                        <div className="aboutText text-lg md:text-xl" dangerouslySetInnerHTML={{ __html: aboutText! }}></div>
                         <div className="rrss">
                             {rrss?.instagram && <Link key="instagram" to={rrss.instagram} target="_blank">
                                 <button className='button'>

@@ -1,11 +1,5 @@
 .bookPage {
-  padding: 24px 89px;
-  min-height: 85dvh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-bottom: 2px solid #0000001f;
-  gap: 20px;
+  gap: 50px;
 
   .bookContainer {
     display: flex;
@@ -15,43 +9,44 @@
     aside {
       width: 70%;
       min-width: 170px;
+      max-width: 311px;
+    }
 
-      .buttonsContainer {
-        flex: 1;
-        display: flex;
-        gap: 5px;
-        align-items: flex-end;
-        flex-wrap: wrap;
-        margin: 10px 0;
+    .buttonsContainer {
+      flex: 1;
+      display: flex;
+      gap: 5px;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      margin: 10px 0;
 
-        a {
+      a {
+        width: 100%;
+
+        button {
+          cursor: pointer;
           width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          background-color: var(--background-button-dark);
+          border: 1px solid var(--border-button-dark);
+          padding: 5px 10px;
+          border-radius: 4px;
+          color: white;
 
-          button {
-            cursor: pointer;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background-color: var(--background-button-dark);
-            border: 1px solid var(--border-button-dark);
-            padding: 5px 10px;
+          &:hover {
+            background-color: var(--background-button-dark-hover);
+          }
+
+          &:active {
+            background-color: var(--background-button-dark-active);
+          }
+
+          .buttonImage {
             border-radius: 4px;
-            color: white;
-
-            &:hover {
-              background-color: var(--background-button-dark-hover);
-            }
-
-            &:active {
-              background-color: var(--background-button-dark-active);
-            }
-
-            .buttonImage {
-              border-radius: 4px;
-              width: 20px;
-            }
+            width: 20px;
           }
         }
       }
@@ -74,6 +69,7 @@
           display: flex;
           gap: 10px;
           margin-bottom: 10px;
+          flex-wrap: wrap;
 
           .ageContainer {
             display: flex;
@@ -101,6 +97,20 @@
     }
   }
 
+  .bookInfoSmall {
+    margin-top: 15px;
+    flex-direction: column;
+    gap: 5px;
+
+    .buttonsContainer {
+      flex-direction: row;
+
+      a {
+        width: unset;
+      }
+    }
+  }
+
   .otherBooksContainer {
     .bookHeader {
       border-bottom: 1px solid #0000001f;
@@ -112,6 +122,7 @@
       flex-wrap: wrap;
 
       a {
+        width: 158px;
         margin-top: 10px;
 
         img {

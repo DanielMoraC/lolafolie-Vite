@@ -1,14 +1,13 @@
 {
-    "redes": {},
+    "redes": {
+        "instagram": "https://www.instagram.com/lolafolie_autora/",
+        "amazon": "https://www.amazon.es/s?rh=p_27%3ALola%2BFolie",
+        "goodreads": "https://www.goodreads.com/author/show/53116842.Lola_Folie",
+        "threads": "https://www.threads.com/@lolafolie_autora"
+    },
     "aboutMe": {
         "text": "Encantada, soy Lola Folie.|Por circunstancias de la vida nací en Córdoba (España), pero siempre he vivido en los libros que leía.|Con pasión por la lectura y las letras empecé a escribir en una época de mucho tiempo libre, la pandemia.|Me gusta escribir romántica con spicy, pero algunas veces mataré a personajes, depende de como de feliz esté con mi círculo más cercano en el momento que escriba.|Un saludo y gracias por visitar mi web.",
-        "image": "/foto-about.png",
-        "rrss": {
-            "instagram": "https://www.instagram.com/lolafolie_autora/",
-            "amazon": "https://www.amazon.es/s?rh=p_27%3ALola%2BFolie",
-            "goodreads": "https://www.goodreads.com/author/show/53116842.Lola_Folie",
-            "threads": "https://www.threads.com/@lolafolie_autora"
-        }
+        "image": "/foto-about.png"
     },
     "sagas": [
         {
@@ -29,7 +28,9 @@
                     "img": "/libro-img.png",
                     "front": "/entre-tu-espacio-y-el-mio-front.png",
                     "isbn": "979-8344882154",
-                    "publishDate": "2024-11-19"
+                    "publishDate": "2024-11-19",
+                    "colorUp": "#ffc6c6",
+                    "colorDown": "#c3c3ff"
                 },
                 {
                     "id": "test",

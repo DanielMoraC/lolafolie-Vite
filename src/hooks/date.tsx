@@ -7,7 +7,6 @@ interface FormatDateBookProps {
 
 export function formatDateBook({ date }: FormatDateBookProps) {
     moment.locale('es')
-    console.log(moment.locale());
 
     return moment(date).format('DD MMMM YYYY')
 }
