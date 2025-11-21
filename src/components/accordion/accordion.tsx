@@ -44,6 +44,11 @@ export function Accordion({ saga, only }: AccordionProps) {
                 checkHeight()
             })
         }, 100);
+
+        setInterval(() => {
+            setHeight('unset');
+            checkHeight()
+        }, 100)
     }, [])
 
     const checkHeight = () => {
