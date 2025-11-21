@@ -31,7 +31,7 @@ export function Spice({ spice }: SpiceProps) {
         <>
             {spiceLength.map((_, index) => {
                 return (
-                    <img key={index} src="/chili.png" alt="Spice" className='imgChili' />
+                    <img loading="lazy" key={index} src="/chili.png" alt="Spice" className='imgChili' />
                 )
             })}
         </>
@@ -47,7 +47,7 @@ export function Card({ sagaPage, saga, card }: CardProps) {
             <div className='shadow-md card hidden md:flex'>
                 <div className="img">
                     <Link key={card.title} to={`/book/${saga}/${card.id}`}>
-                        <img src={card.img} alt={card.title} />
+                        <img loading="lazy" src={card.img} alt={card.title} />
                     </Link>
                 </div>
                 <div className='textsContainer'>
@@ -75,13 +75,13 @@ export function Card({ sagaPage, saga, card }: CardProps) {
                     <div className='buttonsContainer'>
                         <Link key={card.amazon} to={card.amazon} target="_blank">
                             <button className='button text-neutral-50'>
-                                <img src="/amazon_ico.png" alt="Amazon" className='buttonImage' />
+                                <img loading="lazy" src="/amazon_ico.png" alt="Amazon" className='buttonImage' />
                                 Amazon
                             </button>
                         </Link>
                         {card?.goodreads && <Link key={card.goodreads} to={card.goodreads} target="_blank">
                             <button className='button text-neutral-50'>
-                                <img src="/goodreads_ico.png" alt="Goodreads" className='buttonImage' />
+                                <img loading="lazy" src="/goodreads_ico.png" alt="Goodreads" className='buttonImage' />
                                 Goodreads
                             </button>
                         </Link>}
@@ -92,7 +92,7 @@ export function Card({ sagaPage, saga, card }: CardProps) {
             <div className="smallCard flex md:hidden">
                 <div className="img">
                     <Link key={card.title} to={`/book/${saga}/${card.id}`}>
-                        <img src={card?.front} alt={card.title} />
+                        <img loading="lazy" src={card?.front} alt={card.title} />
                     </Link>
                 </div>
                 <div className='textsContainer'>
@@ -103,7 +103,7 @@ export function Card({ sagaPage, saga, card }: CardProps) {
                     <div className="buttonsContainer">
                         <Link key={card.amazon} to={card.amazon} target="_blank">
                             <button className='button text-neutral-50'>
-                                <img src="/amazon_ico.png" alt="Amazon" className='buttonImage' />
+                                <img loading="lazy" src="/amazon_ico.png" alt="Amazon" className='buttonImage' />
                                 <span className="text-base">Amazon</span>
                             </button>
                         </Link>

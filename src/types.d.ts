@@ -9,7 +9,7 @@ export interface AboutMe {
 }
 
 export interface Redes {
-    instagram, amazon, goodreads, threads: string
+    instagram, amazon, goodreads, threads, tiktok: string
 }
 
 export interface Saga {

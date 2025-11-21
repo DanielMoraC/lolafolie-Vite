@@ -20,6 +20,10 @@
   }
 
   .otherSaga {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
     .otherSagasContainer {
       display: flex;
       flex-direction: column;

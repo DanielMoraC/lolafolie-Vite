@@ -65,17 +65,17 @@ export function BookPage() {
             <div className='bookPage page'>
                 <div className="bookContainer">
                     <aside className="hidden md:block">
-                        <img src={book?.front} alt={book?.title} />
+                        <img loading="lazy" src={book?.front} alt={book?.title} />
                         <div className='buttonsContainer'>
                             {book?.amazon && <Link key={book.amazon} to={book.amazon} target="_blank">
                                 <button className='button'>
-                                    <img src="/amazon_ico.png" alt="Amazon" className='buttonImage' />
+                                    <img loading="lazy" src="/amazon_ico.png" alt="Amazon" className='buttonImage' />
                                     Amazon
                                 </button>
                             </Link>}
                             {book?.goodreads && <Link key={book.goodreads} to={book.goodreads} target="_blank">
                                 <button className='button'>
-                                    <img src="/goodreads_ico.png" alt="Goodreads" className='buttonImage' />
+                                    <img loading="lazy" src="/goodreads_ico.png" alt="Goodreads" className='buttonImage' />
                                     Goodreads
                                 </button>
                             </Link>}
@@ -97,7 +97,7 @@ export function BookPage() {
                                 <span className="text-lg md:text-2xl text-gray-500">- </span>
                                 <span className="text-lg md:text-2xl text-gray-500">{book?.category}</span>
                                 <div className="ageContainer">
-                                    {book?.age && <span className='age'>{book.age}</span>}
+                                    {book?.age && <span className='age text-gray-500'>{book.age}</span>}
                                     {book?.spice && <Spice spice={book?.spice}></Spice>}
                                 </div>
                             </div>
@@ -108,13 +108,13 @@ export function BookPage() {
                             <div className='buttonsContainer'>
                                 {book?.amazon && <Link key={book.amazon} to={book.amazon} target="_blank">
                                     <button className='button'>
-                                        <img src="/amazon_ico.png" alt="Amazon" className='buttonImage' />
+                                        <img loading="lazy" src="/amazon_ico.png" alt="Amazon" className='buttonImage' />
                                         Amazon
                                     </button>
                                 </Link>}
                                 {book?.goodreads && <Link key={book.goodreads} to={book.goodreads} target="_blank">
                                     <button className='button'>
-                                        <img src="/goodreads_ico.png" alt="Goodreads" className='buttonImage' />
+                                        <img loading="lazy" src="/goodreads_ico.png" alt="Goodreads" className='buttonImage' />
                                         Goodreads
                                     </button>
                                 </Link>}
@@ -135,7 +135,7 @@ export function BookPage() {
                             {otherBooks?.map((book) => {
                                 return (
                                     <Link key={book?.title} to={`/book/${saga?.id}/${book?.id}`}>
-                                        <img src={book?.front} alt={book?.title} />
+                                        <img loading="lazy" src={book?.front} alt={book?.title} />
                                         <span className='text-lg'>{book?.title}</span>
                                     </Link>
                                 )

@@ -3,65 +3,75 @@
         "instagram": "https://www.instagram.com/lolafolie_autora/",
         "amazon": "https://www.amazon.es/s?rh=p_27%3ALola%2BFolie",
         "goodreads": "https://www.goodreads.com/author/show/53116842.Lola_Folie",
-        "threads": "https://www.threads.com/@lolafolie_autora"
+        "threads": "https://www.threads.com/@lolafolie_autora",
+        "tiktok": "https://www.tiktok.com/@lolafolie_autora"
     },
     "aboutMe": {
-        "text": "Encantada, soy Lola Folie.|Por circunstancias de la vida nací en Córdoba (España), pero siempre he vivido en los libros que leía.|Con pasión por la lectura y las letras empecé a escribir en una época de mucho tiempo libre, la pandemia.|Me gusta escribir romántica con spicy, pero algunas veces mataré a personajes, depende de como de feliz esté con mi círculo más cercano en el momento que escriba.|Un saludo y gracias por visitar mi web.",
+        "text": "Cordobesa de los pies a la cabeza, pero de corazón viajero y, sobre todo, de culo inquieto.|Llevo escribiendo desde que tengo uso de razón, aunque la valentía de compartirlo con el mundo me llegó hace poco. Primero en Wattpad en 2020 y desde octubre de 2024 autopublicando en Amazon.|Puedes encontrar mis novelas autopublicadas en Amazon en tapa blanda y Kindle Unlimited.|Mi género predilecto es la romántica y, como buena millennial, no puedo evitar ser un poco melodramática.",
         "image": "/foto-about.png"
     },
     "sagas": [
         {
             "id": "paris",
             "title": "París",
-            "description": "Un grupo de amigas viviendo en Paris. Conocidas por una universidad, unidas por una sala de baile y una barra de bar.",
+            "description": "Piérdete en las calles de París y descubre sus rincones más escondidos de la mano de Ivett, Anna y Charlotte",
             "category": "Romance",
             "books": [
                 {
                     "id": "entre-tu-espacio-y-el-mio",
                     "title": "Entre tu espacio y el mío",
-                    "synopsis": "A Ivett se le ha agotado el tiempo que puede permanecer en la residencia en la que vive y debe marcharse el día de su cumpleaños al haber superado el límite de edad que establece la normativa.|A Dorian la casera de su amigo lo ha echado del piso tras haberlo pillado durmiendo en el sofá.|A Ivett y a Dorian les han alquilado los mismos diez metros cuadrados y, por imposible que parezca, se ven en la necesidad de compartir un espacio imposible en el que sus inseguridades y frustraciones van a tener que aprender a convivir.|Dos desconocidos.|Diez metros cuadrados.|Y, por supuesto, París.",
+                    "synopsis": "A Ivett se le ha agotado el tiempo que puede permanecer en la residencia en la que vive y debe marcharse el día de su cumpleaños al haber superado el límite de edad que establece la normativa.|A Dorian la casera de su amigo lo ha echado del piso tras haberlo pillado durmiendo en el sofá.|A Ivett y a Dorian les han alquilado los mismos diez metros cuadrados y, por imposible que parezca, se ven en la necesidad de compartir un espacio imposible en el que sus inseguridades y frustraciones van a tener que aprender a convivir.|Dos desconocidos.|Diez metros cuadrados.|Y, por supuesto, París.",
                     "age": "+17",
                     "amazon": "https://amzn.eu/d/64SuCVe",
                     "goodreads": "https://www.goodreads.com/book/show/221516180-entre-tu-espacio-y-el-m-o",
                     "category": "Romance",
                     "spice": 2,
-                    "img": "/libro-img.png",
+                    "img": "/entre-tu-espacio-y-el-mio.png",
                     "front": "/entre-tu-espacio-y-el-mio-front.png",
-                    "isbn": "979-8344882154",
+                    "isbn": "978-84-09-78323-6",
                     "publishDate": "2024-11-19",
-                    "colorUp": "#ffc6c6",
-                    "colorDown": "#c3c3ff"
+                    "colorUp": null,
+                    "colorDown": null
                 },
                 {
-                    "id": "test",
-                    "title": "Libro nuevo de prueba",
-                    "synopsis": "A Ivett se le ha agotado el tiempo que puede permanecer en la residencia en la que vive y debe marcharse el día de su cumpleaños al haber superado el límite de edad que establece la normativa.|A Dorian la casera de su amigo lo ha echado del piso tras haberlo pillado durmiendo en el sofá.|A Ivett y a Dorian les han alquilado los mismos diez metros cuadrados y, por imposible que parezca, se ven en la necesidad de compartir un espacio imposible en el que sus inseguridades y frustraciones van a tener que aprender a convivir.|Dos desconocidos.|Diez metros cuadrados.|Y, por supuesto, París.",
-                    "amazon": "https://amzn.eu/d/64SuCVe",
-                    "category": "Romance",
-                    "img": "/libro-img.png",
-                    "front": "/bandera-a-cuadros-front.png"
+                    "id": "bandera-a-cuadros",
+                    "title": "Bandera a cuadros",
+                    "synopsis": "Un mundial de Fórmula 1.|Un momento de impulsividad.|Un accidente fatal.|A Tobias, la culpa de ser el responsable del accidente que mantiene en coma a su amigo lo persigue sin importar lo rápido que corra.|Irina no sabe qué hacer con su vida. Ha terminado su tesis y se siente perdida, estancada y desganada.|La posibilidad de entrar a trabajar para una empresa automovilística y poner en práctica lo que lleva años investigando es la oportunidad de oro con la que no sabía que soñaba.|Lo que no esperaba era adentrarse en el complejo mundo de la Fórmula 1 y la presión de un deporte en el que hay mucho más en juego que el propio campeonato.|¿Logrará Irina cumplir con la tarea de vigilar a Tobias y convencer a su nuevo jefe de su valía? ¿Conseguirán Irina y Tobias evitar que la exigencia competitiva rompa algo que ni siquiera ha empezado?",
+                    "age": null,
+                    "amazon": "https://amzn.eu/d/6CLX1lM",
+                    "goodreads": "https://www.goodreads.com/book/show/230416432-bandera-a-cuadros",
+                    "category": "Sport Romance",
+                    "spice": 1,
+                    "img": "/bandera-a-cuadros.png",
+                    "front": "/bandera-a-cuadros-front.png",
+                    "isbn": "978-84-09-78420-2",
+                    "publishDate": "2025-04-02",
+                    "colorUp": null,
+                    "colorDown": null
                 }
             ]
         },
         {
             "id": "f1",
             "title": "F1",
-            "descipción": "Coches go broom y algunas veces pum",
-            "category": "Romance - Deporte",
+            "descipción": "La velocidad nunca ha sido tan adictiva",
+            "category": "Sport Romance",
             "books": [
                 {
-                    "id": "bandera-a-cuadros",
-                    "title": "Bandera a cuadros",
-                    "synopsis": "A Tobias, la culpa de ser el responsable del accidente que mantiene en coma a su amigo lo persigue sin importar lo rápido que corra.|Irina no sabe qué hacer con su vida. Ha terminado su tesis y se siente perdida, estancada y desganada.|La posibilidad de entrar a trabajar para una empresa automovilística y poner en práctica lo que lleva años investigando es la oportunidad de oro con la que no sabía que soñaba.|Lo que no esperaba era adentrarse en el complejo mundo de la Fórmula 1 y la presión de un deporte en el que hay mucho más en juego que el propio campeonato.|¿Logrará Irina cumplir con la tarea de vigilar a Tobias y convencer a su nuevo jefe de su valía? ¿Conseguirán Irina y Tobias evitar que la exigencia competitiva rompa algo que ni siquiera ha empezado?",
-                    "age": "+14",
-                    "amazon": "https://amzn.eu/d/iUhS0mz",
-                    "goodreads": "https://www.goodreads.com/book/show/230416432-bandera-a-cuadros",
-                    "category": "Romance - Deporte",
+                    "id": "fuera-de-pista",
+                    "title": "Fuera de pista",
+                    "synopsis": "Una última oportunidad.|Una apuesta arriesgada.|Un campeonato en juego.|Blake sabe que le quedan pocas oportunidades en el mundo de la Fórmula 1 antes de que se olviden de él. Por eso, acepta la oferta de la escudería Ricard para competir con ellos, aunque suponga traicionar sus principios y la memoria de su amigo fallecido.|Juliette está cansada de ver cómo se la ningunea y se la relega a las sombras por el mero hecho de ser mujer. Tiene claro que es mejor opción para liderar la empresa que su primo Roland y está dispuesta a lo que sea para demostrarlo.|Ella tiene un plan para devolver a la empresa Ricard el prestigio del pasado. Él necesita ganar para demostrarle al mundo que no ha llegado a la máxima categoría solo por el dinero de su familia.|Ambos están dispuestos a arriesgarlo todo para ganar el mundial de Fórmula 1, pero ¿y si la victoria los lleva a perderse a sí mismos en el camino?",
+                    "age": null,
+                    "amazon": "https://amzn.eu/d/7zQu5OV",
+                    "goodreads": "https://www.goodreads.com/book/show/243622700-fuera-de-pista-f-rmula-1",
+                    "category": "Sport Romance",
                     "spice": 1,
-                    "img": "/libro-img.png",
-                    "front": "/bandera-a-cuadros-front.png",
-                    "isbn": "979-8315254577",
-                    "publishDate": "2025-03-29"
+                    "img": "/fuera-de-pista.png",
+                    "front": "/fuera-de-pista-front.png",
+                    "isbn": "978-84-09-78937-5",
+                    "publishDate": "2025-11-17",
+                    "colorUp": null,
+                    "colorDown": null
                 }
             ]
         }

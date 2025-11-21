@@ -14,8 +14,10 @@ export function Header() {
     return (
         <header className='header'>
             <div className='icon'>
-                {/* <img src="/ico.svg" alt="Firma Lola Folie" className='imgLogo' /> */}
-                <span className='text-3xl font-bold'>Lola Folie</span>
+                {/* <img loading="lazy" src="/ico.svg" alt="Firma Lola Folie" className='imgLogo' /> */}
+                <Link key={'Inicio'} to={'/'} className='text-3xl font-bold'>
+                    <span >Lola Folie</span>
+                </Link>
             </div>
             <nav className='linkContainer'>
                 {routes.map((route) => {
