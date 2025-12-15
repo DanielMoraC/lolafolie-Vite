@@ -24,23 +24,20 @@
     flex-direction: row;
     gap: 50px;
 
-    aside {
-      width: 70%;
-      min-width: 170px;
+    main {
+      flex-direction: column;
 
       img {
-        width: 100%;
+        float: left;
+        width: 28%;
         object-fit: scale-down;
+        margin-right: 10px;
+        margin-bottom: 10px;
       }
-    }
-
-    main {
-      display: flex;
-      flex-direction: column;
 
       .aboutText > p,
       h1 {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
       }
 
       .rrss {

@@ -33,12 +33,8 @@ export default function AbountPage() {
                         <div className="horizontalLine"></div>
                     </div>
                     <div className="aboutMeContainer">
-                        <aside className="hidden md:flex">
-                            {/* {aboutImg && <img loading="lazy" src={aboutImg} alt="Lola Folie foto" />} */}
-                            {aboutImg && <img src={aboutImg} alt="Lola Folie foto" />}
-                        </aside>
-
                         <main className="infoBookContainer">
+                            {aboutImg && <img className="hidden md:flex" src={aboutImg} alt="Lola Folie foto" />}
                             <h1 className="h1Generic">Sobre Lola Folie</h1>
                             <div className="aboutText text-lg md:text-xl" dangerouslySetInnerHTML={{ __html: aboutText! }}></div>
                             <div className="rrss">
