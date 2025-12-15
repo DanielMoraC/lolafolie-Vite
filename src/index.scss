@@ -1,6 +1,21 @@
 :root {
-  --background: linear-gradient(#e9dbcc, #eedfd0);
-  --foreground: #171717;
+  --background: linear-gradient(#efece9, #f4eee8);
+  --footer: #f4eee8;
+  --foreground: #1e1b18;
+  // --border-button-dark: #3e92cc;
+  --border-button-dark: transparent;
+  --background-button-dark: #d8315b;
+  --background-button-dark-hover: #ba2349;
+  --background-button-dark-active: #de5476;
+
+  --link: #7b1b38;
+  --link-selected: #d8315b;
+  --link-active: #9a2c13;
+  --link-hover: #ce3a19;
+
+  --subtitle-color: #ed856d;
+
+  --age-color: #3e92cc;
 }
 
 html,
@@ -24,11 +39,6 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-
-  --border-button-dark: gray;
-  --background-button-dark: #464646;
-  --background-button-dark-hover: #2c2c2c;
-  --background-button-dark-active: black;
 }
 
 .google-sans-code {
@@ -37,8 +47,21 @@ body {
 }
 
 a {
-  color: inherit;
+  color: var(--link);
   text-decoration: none;
+
+  &:hover {
+    color: var(--link-hover);
+  }
+
+  &:active {
+    color: var(--link-active);
+  }
+
+  &.aSelected {
+    text-decoration: underline;
+    color: var(--link-selected) !important;
+  }
 }
 
 .containerPages {
@@ -57,11 +80,17 @@ a {
   display: flex;
   flex-direction: column;
   flex: 1;
+  height: 100dvh;
+  overflow: hidden;
 
-  .page {
-    padding: 24px 9%;
-    min-height: 83dvh;
-    display: flex;
-    flex-direction: column;
+  .pageContainer {
+    overflow: auto;
+
+    .page {
+      padding: 24px 9%;
+      min-height: 83dvh;
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

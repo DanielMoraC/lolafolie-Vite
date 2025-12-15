@@ -15,7 +15,7 @@ export function Footer({ backgroundColor }: FooterProps) {
 
     useEffect(() => {
         const footer = document.querySelector('footer')
-        footer?.style.setProperty('background', backgroundColor ? backgroundColor : 'var(--background)')
+        footer?.style.setProperty('background', backgroundColor ? backgroundColor : 'var(--footer)')
         fetch('/config.json')
             .then(async res => res.json())
             .then(res => {

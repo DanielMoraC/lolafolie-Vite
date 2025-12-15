@@ -10,6 +10,10 @@
       width: 70%;
       min-width: 170px;
       max-width: 311px;
+
+      img {
+        border-radius: 8px;
+      }
     }
 
     .buttonsContainer {
@@ -31,9 +35,9 @@
           justify-content: center;
           gap: 10px;
           background-color: var(--background-button-dark);
-          border: 1px solid var(--border-button-dark);
+          border: 2px solid var(--border-button-dark);
           padding: 5px 10px;
-          border-radius: 4px;
+          border-radius: 8px;
           color: white;
 
           &:hover {
@@ -83,10 +87,11 @@
             }
 
             .age {
-              border: 1px solid var(--color-gray-500);
+              border: 1px solid var(--age-color);
               border-radius: 4px;
               padding: 5px;
               font-size: 10px;
+              color: var(--age-color);
             }
           }
         }
@@ -122,12 +127,16 @@
       flex-wrap: wrap;
 
       a {
-        width: 158px;
         margin-top: 10px;
 
-        img {
-          max-width: 150px;
-          object-fit: cover;
+        .image {
+          width: 158px;
+
+          img {
+            max-width: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+          }
         }
       }
     }

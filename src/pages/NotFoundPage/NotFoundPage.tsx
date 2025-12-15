@@ -9,15 +9,21 @@ export default function NotFoundPage() {
     return (
         <>
             <Header />
-            <main className="notFoundPage page">
-                <BookDashed color="black" />
-                <h1 className="text-3xl">404 No se ha encontrado la página</h1>
-                <div className="links">
-                    <Link to="/" className="text-3xl font-bold hover:underline">Inicio</Link>
-                    <Link to="/about" className="text-3xl font-bold hover:underline">Sobre mi</Link>
-                </div>
-            </main>
-            <Footer />
+            <div className="pageContainer">
+                <main className="notFoundPage page">
+                    <BookDashed color="black" />
+                    <h1 className="text-3xl font-bold">404 No se ha encontrado la página</h1>
+                    <div className="links">
+                        <Link to="/">
+                            <span className="text-3xl">Inicio</span>
+                        </Link>
+                        <Link to="/about">
+                            <span className="text-3xl">Sobre mi</span>
+                        </Link>
+                    </div>
+                </main>
+                <Footer />
+            </div>
         </>
     )
 }

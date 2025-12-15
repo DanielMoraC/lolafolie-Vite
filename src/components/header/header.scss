@@ -1,18 +1,26 @@
 header.header {
   display: flex;
   justify-content: space-between;
-  height: 70px;
-  background-color: #e6d8c7;
+  min-height: 65px;
+  background-color: #f2ebe3;
   border-bottom: 2px solid #0000001f;
   box-shadow: 0px -8px 13px gray;
   position: sticky;
   top: 0px;
+  z-index: 5;
 
   .icon {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-left: 5px;
+    margin-left: 15px;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    a {
+      color: unset;
+    }
 
     .imgLogo {
       height: 65px;
@@ -20,18 +28,39 @@ header.header {
     }
   }
 
-  .linkContainer {
-    display: flex;
+  .linkContainer,
+  .hamburger {
+    // display: flex;
     align-items: center;
     margin-right: 20px;
     gap: 15px;
   }
+}
 
-  a {
-    color: unset;
-  }
+.navContainer {
+  position: fixed;
+  width: 38dvw;
+  height: 100dvh;
+  z-index: 3;
+  top: 65px;
+  right: 0;
+  background-color: #f2ebe3;
+  -webkit-box-shadow: -2px 2px 20px -2px rgba(0, 0, 0, 0.4);
+  box-shadow: -2px 2px 20px -2px rgba(0, 0, 0, 0.4);
 
-  .aSelected {
-    text-decoration: underline;
+  nav {
+    height: 100%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
   }
+}
+
+.mask {
+  position: absolute;
+  z-index: 2;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: black;
+  opacity: 0.2;
 }

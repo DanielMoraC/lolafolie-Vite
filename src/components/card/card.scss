@@ -7,7 +7,9 @@
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   min-width: 530px;
-  background-color: #eee7dc;
+  background-color: #f9f5f1;
+  border-radius: 12px;
+  overflow: hidden;
 
   .imgChili {
     width: 20px;
@@ -56,9 +58,10 @@
   }
 
   .age {
-    border: 1px solid gray;
+    border: 1px solid var(--age-color);
     border-radius: 4px;
     padding: 5px;
+    color: var(--age-color);
   }
 
   .synopsis {
@@ -100,9 +103,9 @@
       align-items: center;
       gap: 10px;
       background-color: var(--background-button-dark);
-      border: 1px solid var(--border-button-dark);
+      border: 2px solid var(--border-button-dark);
       padding: 5px 10px;
-      border-radius: 4px;
+      border-radius: 12px;
 
       &:hover {
         background-color: var(--background-button-dark-hover);
@@ -123,6 +126,13 @@
 .smallCard {
   flex-direction: column;
   max-width: 158px;
+  min-width: 136px;
+  flex: 1;
+
+  .img {
+    border-radius: 8px;
+    overflow: hidden;
+  }
 
   .buttonsContainer {
     display: flex;
@@ -137,11 +147,11 @@
         width: 100%;
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 11px;
         background-color: var(--background-button-dark);
-        border: 1px solid var(--border-button-dark);
-        padding: 2px 5px;
-        border-radius: 4px;
+        border: 2px solid var(--border-button-dark);
+        padding: 2px 9px;
+        border-radius: 8px;
 
         &:hover {
           background-color: var(--background-button-dark-hover);

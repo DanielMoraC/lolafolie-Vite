@@ -36,24 +36,17 @@ export function Accordion({ saga, only }: AccordionProps) {
     const [maxHeight, setHeight] = useState<string>("100000000px")
 
     useEffect(() => {
-        setTimeout(() => {
-            checkHeight()
-
-            window.addEventListener('resize', () => {
-                setHeight('unset');
-                checkHeight()
-            })
-        }, 100);
-
-        setInterval(() => {
+        const checkHeight = () => {
             setHeight('unset');
-            checkHeight()
-        }, 100)
-    }, [])
+            setHeight(`${document.querySelector('.accordionBody') ? document.querySelector('.accordionBody')?.scrollHeight : 0}px`);
+        }
 
-    const checkHeight = () => {
-        setHeight(`${document.querySelector('.accordionBody') ? document.querySelector('.accordionBody')?.scrollHeight : 0}px`);
-    }
+        window.addEventListener('resize', checkHeight)
+
+        return () => {
+            window.removeEventListener('resize', checkHeight)
+        }
+    }, [])
 
     const onAccordionClick = () => {
         if (!only) {
@@ -67,11 +60,11 @@ export function Accordion({ saga, only }: AccordionProps) {
                 <div>
                     <Link key={saga?.title} to={`/saga/${saga?.id}`}
                         className='line-clamp-1 title'>
-                        <h2 className='text-2xl font-bold hover:underline'>{saga?.title}</h2>
+                        <h2 className='text-2xl font-bold'>{saga?.title}</h2>
                     </Link>
                 </div>
                 <div className='accordionArrow' onClick={onAccordionClick}>
-                    <span className='line-clamp-1 accordionDesc text-lg text-gray-500'>{saga?.category}</span>
+                    <span className='line-clamp-1 accordionDesc text-lg text-(--subtitle-color)'>{saga?.category}</span>
                     {
                         open ?
                             <BookOpenText color='black' />

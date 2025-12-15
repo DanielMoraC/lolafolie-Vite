@@ -21,17 +21,19 @@ export default function HomePage() {
     return (
         <>
             <Header />
-            <div className='homePage page'>
-                <main>
-                    <h1 className="h1Generic">Lola Folie - Autora de novela romántica</h1>
-                    {sagas?.map((saga: Saga) => {
-                        return (
-                            <Accordion key={saga?.id} saga={saga} only={sagas.length == 1}></Accordion>
-                        )
-                    })}
-                </main>
+            <div className="pageContainer">
+                <div className='homePage page'>
+                    <main>
+                        <h1 className="h1Generic">Lola Folie - Autora de novela romántica</h1>
+                        {sagas?.map((saga: Saga) => {
+                            return (
+                                <Accordion key={saga?.id} saga={saga} only={sagas.length == 1}></Accordion>
+                            )
+                        })}
+                    </main>
+                </div>
+                <Footer />
             </div>
-            <Footer />
         </>
     )
 }

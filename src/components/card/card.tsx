@@ -55,9 +55,9 @@ export function Card({ sagaPage, saga, card }: CardProps) {
                         <div className='titleCategoryContainer'>
                             <Link key={card.title} to={`/book/${saga}/${card.id}`}
                                 className='line-clamp-1 title font-bold text-xl'>
-                                {sagaPage ? <h2 className="hover:underline">{card.title}</h2> : <h3 className="hover:underline">{card.title}</h3>}
+                                {sagaPage ? <h2>{card.title}</h2> : <h3>{card.title}</h3>}
                             </Link>
-                            {sagaPage && <span className='text-gray-500 text-lg'>{card.category}</span>}
+                            {sagaPage && <span className='text-(--subtitle-color) text-lg'>{card.category}</span>}
                         </div>
                         <div className='ageContainer'>
                             {sagaPage && card?.spice && <Spice spice={card?.spice}></Spice>}
@@ -98,7 +98,7 @@ export function Card({ sagaPage, saga, card }: CardProps) {
                 <div className='textsContainer'>
                     <Link key={card.title} to={`/book/${saga}/${card.id}`}
                         className='line-clamp-2 title text-lg'>
-                        {sagaPage ? <h2 className="hover:underline">{card.title}</h2> : <h3 className="hover:underline">{card.title}</h3>}
+                        {sagaPage ? <h2 >{card.title}</h2> : <h3>{card.title}</h3>}
                     </Link>
                     <div className="buttonsContainer">
                         <Link key={card.amazon} to={card.amazon} target="_blank">
