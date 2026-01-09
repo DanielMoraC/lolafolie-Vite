@@ -1,6 +1,7 @@
 export interface Data {
     redes: Redes
     aboutMe: AboutMe
+    heroData: HeroData
     sagas: Saga[]
 }
 
@@ -20,6 +21,12 @@ export interface Saga {
     books: Book[]
 }
 
+export interface HeroData {
+    id: string,
+    backgroundUp: string | undefined,
+    backgroundDown: string | undefined
+}
+
 export interface Book {
     id: string,
     title: string,
@@ -35,4 +42,11 @@ export interface Book {
     publishDate: string | undefined,
     colorUp: string | undefined,
     colorDown: string | undefined,
+}
+
+export interface HeroDataComponent {
+    heroBook: Book,
+    heroSaga: Saga,
+    colorUp: string | undefined,
+    colorDown: string | undefined
 }

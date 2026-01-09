@@ -69,6 +69,7 @@
     --line-clamp: 6;
     display: -webkit-box;
     -webkit-line-clamp: var(--line-clamp);
+    line-clamp: var(--line-clamp);
     -webkit-box-orient: vertical;
     overflow: hidden;
 

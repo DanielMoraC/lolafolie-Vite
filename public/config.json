@@ -10,6 +10,11 @@
         "text": "Cordobesa de los pies a la cabeza, pero de corazón viajero y, sobre todo, de culo inquieto.|Llevo escribiendo desde que tengo uso de razón, aunque la valentía de compartirlo con el mundo me llegó hace poco. Primero en Wattpad en 2020 y desde octubre de 2024 autopublicando en Amazon.|Puedes encontrar mis novelas autopublicadas en Amazon en tapa blanda y Kindle Unlimited.|Mi género predilecto es la romántica y, como buena millennial, no puedo evitar ser un poco melodramática.",
         "image": "/foto-about.png"
     },
+    "heroData": {
+        "id": "fuera-de-pista",
+        "backgroundUp": "rgb(189 154 101)",
+        "backgroundDown": "rgb(255 230 206)"
+    },
     "sagas": [
         {
             "id": "paris",

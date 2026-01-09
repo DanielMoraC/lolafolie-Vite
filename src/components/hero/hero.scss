@@ -1,0 +1,65 @@
+.hero {
+  width: 100%;
+  background-color: #ffedd6;
+  /* padding: 1rem 1rem; */
+  display: flex;
+  -webkit-box-shadow: 0px 0px 12px 5px rgb(0 0 0 / 13%);
+  box-shadow: 0px 0px 12px 5px rgb(0 0 0 / 13%);
+  justify-content: center;
+
+  .img img {
+    object-fit: scale-down;
+    margin-right: 25px;
+    margin-bottom: 20px;
+    float: left;
+    width: 28%;
+    max-width: 200px;
+    min-width: 150px;
+  }
+
+  .synopsis {
+    margin-right: 7%;
+    --line-clamp: 6;
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp);
+    line-clamp: var(--line-clamp);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    span > p {
+      margin-bottom: 5px;
+    }
+  }
+
+  .buttonsContainer {
+    flex: 1;
+    display: flex;
+    gap: 5px;
+    align-items: flex-end;
+    margin-top: 15px;
+
+    .button {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: var(--background-button-dark);
+      border: 2px solid var(--border-button-dark);
+      padding: 3px 7px;
+      border-radius: 12px;
+
+      &:hover {
+        background-color: var(--background-button-dark-hover);
+      }
+
+      &:active {
+        background-color: var(--background-button-dark-active);
+      }
+
+      .buttonImage {
+        border-radius: 4px;
+        width: 25px;
+      }
+    }
+  }
+}
