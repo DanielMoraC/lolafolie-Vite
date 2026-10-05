@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router"
-import { Footer } from "../../components/FooterNEW/Footer"
+import { Footer } from "../../components/Footer/Footer"
 import { Header } from "../../components/Header/Header"
 import type { Book, Saga } from "../../models/types"
 import './SagaPage.scss'
