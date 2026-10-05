@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { Footer } from "../../components/Footer/Footer"
-import { Header } from "../../components/Header/Header"
 import type { Saga, Book, HeroData, HeroDataComponent } from "../../models/types";
 import './HomePage.scss'
 import { Hero } from "../../components/Hero/Hero";
 import { Books } from "../../components/Books/Books";
 import { Sagas } from "../../components/Sagas/Sagas";
 import About from "../../components/About/About";
+import { Header } from "../../components/Header/Header";
 
 export default function HomePage() {
 
