@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Footer } from "../../components/Footer/Footer"
+import { Footer } from "../../components/FooterNEW/Footer"
 import { Header } from "../../components/Header/Header"
 import type { Saga, Book, HeroData, HeroDataComponent } from "../../models/types";
 import './HomePage.scss'

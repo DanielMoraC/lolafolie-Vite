@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router";
 import { Header } from "../../components/Header/Header";
-import { Footer } from "../../components/Footer/Footer";
+import { Footer } from "../../components/FooterNEW/Footer";
 import type { Book, Saga } from "../../models/types";
 import './BookPage.scss'
 import { formatDateBook } from "../../hooks/useDate";

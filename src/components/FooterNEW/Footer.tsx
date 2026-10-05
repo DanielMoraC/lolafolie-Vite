@@ -1,4 +1,4 @@
-import './footer.scss'
+import './Footer.scss'
 import { useEffect } from "react"
 
 interface FooterProps {
