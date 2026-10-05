@@ -1,0 +1,61 @@
+.cardBookSaga {
+  display: flex;
+  gap: 20px 70px;
+  // padding: 0 10%;
+
+  // &:nth-child(even) {
+  //   flex-direction: row-reverse;
+  // }
+
+  .containerImg {
+    overflow: hidden;
+    border-radius: 15px;
+    // width: 35%;
+    max-width: 500px;
+    box-shadow: 0px 0px 60px 7px rgb(0 0 0 / 30%);
+    transition: all 0.5s;
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    img {
+      object-fit: cover;
+      transition: all 0.5s;
+      height: 100%;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    flex: 1;
+
+    .synopsis {
+      --line-clamp: 5;
+      display: -webkit-box;
+      -webkit-line-clamp: var(--line-clamp);
+      line-clamp: var(--line-clamp);
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+
+  .buttonContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    .button {
+      padding: 3px 8px !important;
+      border-radius: 45px;
+    }
+  }
+}

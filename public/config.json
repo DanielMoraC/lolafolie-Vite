@@ -19,8 +19,9 @@
         {
             "id": "paris",
             "title": "París",
-            "description": "Piérdete en las calles de París y descubre sus rincones más escondidos de la mano de Ivett, Anna y Charlotte",
+            "description": "Piérdete en las calles de París y descubre sus rincones más escondidos de la mano de Ivett, Irina, Anna, Gigi y Charlotte",
             "category": "Romance",
+            "img": "/entre-tu-espacio-y-el-mio.png",
             "books": [
                 {
                     "id": "entre-tu-espacio-y-el-mio",
@@ -30,13 +31,11 @@
                     "amazon": "https://amzn.eu/d/64SuCVe",
                     "goodreads": "https://www.goodreads.com/book/show/221516180-entre-tu-espacio-y-el-m-o",
                     "category": "Romance",
-                    "spice": 2,
                     "img": "/entre-tu-espacio-y-el-mio.png",
                     "front": "/entre-tu-espacio-y-el-mio-front.png",
                     "isbn": "978-84-09-78323-6",
                     "publishDate": "2024-11-19",
-                    "colorUp": null,
-                    "colorDown": null
+                    "pages": "373"
                 },
                 {
                     "id": "bandera-a-cuadros",
@@ -46,13 +45,11 @@
                     "amazon": "https://amzn.eu/d/6CLX1lM",
                     "goodreads": "https://www.goodreads.com/book/show/230416432-bandera-a-cuadros",
                     "category": "Sport Romance",
-                    "spice": 1,
                     "img": "/bandera-a-cuadros.png",
                     "front": "/bandera-a-cuadros-front.png",
                     "isbn": "978-84-09-78420-2",
                     "publishDate": "2025-04-02",
-                    "colorUp": null,
-                    "colorDown": null
+                    "pages": "412"
                 }
             ]
         },
@@ -61,6 +58,7 @@
             "title": "F1",
             "description": "La velocidad nunca ha sido tan adictiva",
             "category": "Sport Romance",
+            "img": "/fuera-de-pista.png",
             "books": [
                 {
                     "id": "fuera-de-pista",
@@ -70,13 +68,11 @@
                     "amazon": "https://amzn.eu/d/7zQu5OV",
                     "goodreads": "https://www.goodreads.com/book/show/243622700-fuera-de-pista-f-rmula-1",
                     "category": "Sport Romance",
-                    "spice": 1,
                     "img": "/fuera-de-pista.png",
                     "front": "/fuera-de-pista-front.png",
                     "isbn": "978-84-09-78937-5",
                     "publishDate": "2025-11-17",
-                    "colorUp": null,
-                    "colorDown": null
+                    "pages": "385"
                 }
             ]
         }

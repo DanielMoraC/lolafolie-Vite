@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-import { Accordion } from "../../components/accordion/accordion";
-import { Footer } from "../../components/footer/footer"
-import { Header } from "../../components/header/header"
-import type { Saga, Book, HeroData, HeroDataComponent } from "../../types";
+import { Footer } from "../../components/Footer/Footer"
+import { Header } from "../../components/Header/Header"
+import type { Saga, Book, HeroData, HeroDataComponent } from "../../models/types";
 import './HomePage.scss'
-import { Hero } from "../../components/hero/hero";
+import { Hero } from "../../components/Hero/Hero";
+import { Books } from "../../components/Books/Books";
+import { Sagas } from "../../components/Sagas/Sagas";
+import About from "../../components/About/About";
 
 export default function HomePage() {
 
@@ -42,17 +44,13 @@ export default function HomePage() {
             <Header />
             <div className="pageContainer">
                 {heroData && <Hero heroData={heroData}></Hero>}
-                <div className='homePage page'>
-                    <main>
-                        <h1 className="h1Generic">Lola Folie - Autora de novela romántica</h1>
-                        {sagas?.map((saga: Saga) => {
-                            return (
-                                <Accordion key={saga?.id} saga={saga} only={sagas.length == 1}></Accordion>
-                            )
-                        })}
-                    </main>
-                </div>
-                <Footer />
+                <main>
+                    <h1 className="h1Generic">Lola Folie - Autora de novela romántica</h1>
+                    <Sagas sagasData={sagas} />
+                    <Books sagasData={sagas} />
+                    <About />
+                </main>
+                <Footer backgroundColor={'oklch(14.7% 0.004 49.25)'} />
             </div>
         </>
     )

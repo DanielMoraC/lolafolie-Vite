@@ -1,0 +1,16 @@
+.books {
+  gap: 10px;
+  background-color: var(--background-second);
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .booksContainer {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+  }
+}

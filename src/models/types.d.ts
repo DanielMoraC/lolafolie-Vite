@@ -18,6 +18,7 @@ export interface Saga {
     title: string,
     description: string,
     category: string,
+    img: string,
     books: Book[]
 }
 
@@ -35,13 +36,11 @@ export interface Book {
     amazon: string,
     goodreads: string | undefined,
     category: string[],
-    spice: number | undefined,
     img: string,
     front: string
     isbn: string | undefined,
     publishDate: string | undefined,
-    colorUp: string | undefined,
-    colorDown: string | undefined,
+    pages: string | undefined
 }
 
 export interface HeroDataComponent {

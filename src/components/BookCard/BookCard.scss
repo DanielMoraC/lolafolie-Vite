@@ -1,0 +1,26 @@
+.cardBook {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+
+  .containerImg {
+    overflow: hidden;
+    border-radius: 15px;
+
+    img {
+      object-fit: cover;
+      transition: all 0.5s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}

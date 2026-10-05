@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router"
-import { Footer } from "../../components/footer/footer"
-import { Header } from "../../components/header/header"
-import type { Book, Saga } from "../../types"
+import { Footer } from "../../components/Footer/Footer"
+import { Header } from "../../components/Header/Header"
+import type { Book, Saga } from "../../models/types"
 import './SagaPage.scss'
-import { Card } from "../../components/card/card"
+import { BookCardSaga } from "../../components/BookCardSaga/BookCardSaga"
 
 export default function SagaPage() {
     const { sagaID } = useParams()
@@ -12,7 +12,6 @@ export default function SagaPage() {
 
     // const sagas = getSagas();
     const [saga, setSaga] = useState<Saga | undefined>()
-    const [otherSagas, setOtherSagas] = useState<Saga[] | undefined>()
 
     useEffect(() => {
         getSagas()
@@ -38,7 +37,6 @@ export default function SagaPage() {
         const saga = sagas.find((saga: Saga) => saga.id == sagaID);
         if (saga) {
             setSaga(sagas.find((saga: Saga) => saga.id == sagaID))
-            setOtherSagas(sagas.filter((saga: Saga) => saga.id != sagaID))
             document.title = saga?.title ? saga.title + ' - Lola Folie' : 'Lola Folie'
         } else {
             throw404()
@@ -47,46 +45,27 @@ export default function SagaPage() {
 
     return (
         <>
-            <Header />
+            <Header saga={saga} />
             <div className="pageContainer">
                 <main className='sagaPage page'>
-                    <div>
-                        <div className='sagaHeader'>
-                            <h1 className='text-3xl font-bold'>{saga?.title}</h1>
+                    <section className='sagaHero'>
+                        <img src={saga?.img} alt={saga?.title} />
+                        <div className="imgGradient"></div>
+                        <h1 className='text-7xl font-bold mb-9'>{saga?.title}</h1>
+                        <div className="info text-xl italic">
+                            <span>{saga?.category} · {saga?.books.length} novelas</span>
                         </div>
+                    </section>
 
-                        <div className='sagaContainer'>
-                            <p className='text-xl'>{saga?.description}</p>
-                            <div className="books">
-                                {saga?.books?.map((book: Book) => {
-                                    return (
-                                        <Card key={book?.id} saga={saga?.id} card={book} sagaPage={true}></Card>
-                                    )
-                                })}
-                            </div>
-                        </div>
+                    <div className="sagaDescription text-xl">
+                        <p>{saga?.description}</p>
                     </div>
 
-                    {otherSagas && otherSagas?.length > 0 &&
-                        <div className="otherSaga">
-                            <div className='sagaHeader'>
-                                <h3 className='text-2xl'>Otras sagas</h3>
-                            </div>
-
-                            <div className='otherSagasContainer'>
-                                {otherSagas?.map((saga) => {
-                                    return (
-                                        <Link key={saga?.title} to={`/saga/${saga?.id}`}>
-                                            <div className='linkContainer'>
-                                                <span className='text-xl'>{saga?.title}</span>
-                                                <span className='text-lg text-(--subtitle-color)'>{saga?.category}</span>
-                                            </div>
-                                        </Link>
-                                    )
-                                })}
-                            </div>
-                        </div>
-                    }
+                    <section className="booksSection">
+                        {saga?.books.map((book: Book, i: number) => {
+                            return <BookCardSaga book={book} sagaId={saga.id} key={book.id} index={i} />
+                        })}
+                    </section>
                 </main>
                 <Footer />
             </div>

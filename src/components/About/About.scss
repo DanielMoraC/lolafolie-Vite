@@ -1,0 +1,35 @@
+.about {
+  flex-direction: row !important;
+  gap: 50px;
+  background-color: oklch(14.7% 0.004 49.25);
+  color: white;
+
+  img {
+    max-width: 400px;
+    border-radius: 10px;
+  }
+
+  .info {
+    .aboutText {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .rrss {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+
+      button {
+        cursor: pointer;
+        background-color: transparent !important;
+
+        .buttonImage {
+          border-radius: 4px;
+          width: 35px;
+        }
+      }
+    }
+  }
+}

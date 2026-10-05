@@ -3,140 +3,43 @@
 
   .bookContainer {
     display: flex;
-    flex-direction: row;
-    gap: 50px;
+    // flex-direction: row;
+    // gap: 80px;
+    padding: 65px 9%;
 
-    aside {
-      width: 70%;
-      min-width: 170px;
-      max-width: 311px;
-
-      img {
-        border-radius: 8px;
-      }
+    img {
+      border-radius: 15px;
+      object-fit: cover;
+      box-shadow: 0px 0px 60px 7px rgb(0 0 0 / 30%);
     }
 
-    .buttonsContainer {
-      flex: 1;
-      display: flex;
-      gap: 5px;
-      align-items: flex-end;
-      flex-wrap: wrap;
-      margin: 10px 0;
-
-      a {
-        width: 100%;
-
-        button {
-          cursor: pointer;
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 10px;
-          background-color: var(--background-button-dark);
-          border: 2px solid var(--border-button-dark);
-          padding: 5px 10px;
-          border-radius: 8px;
-          color: white;
-
-          &:hover {
-            background-color: var(--background-button-dark-hover);
-          }
-
-          &:active {
-            background-color: var(--background-button-dark-active);
-          }
-
-          .buttonImage {
-            border-radius: 4px;
-            width: 20px;
-          }
-        }
+    .info {
+      .synopsis {
+        line-height: 25px;
+        --line-clamp: 10;
+        display: -webkit-box;
+        -webkit-line-clamp: var(--line-clamp);
+        line-clamp: var(--line-clamp);
+        -webkit-box-orient: vertical;
+        overflow: hidden;
       }
-    }
 
-    .infoBookContainer {
-      display: flex;
-      flex-direction: column;
-
-      .header {
+      .buttonsContainer {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        align-items: flex-end;
-        gap: 5px;
+        gap: 15px;
       }
 
-      .info {
-        .infoBook {
+      .extraInfo {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px 100px;
+
+        .item {
           display: flex;
-          gap: 10px;
-          margin-bottom: 10px;
-          flex-wrap: wrap;
-
-          .ageContainer {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            flex-wrap: wrap-reverse;
-            gap: 10px;
-
-            .imgChili {
-              width: 18px;
-            }
-
-            .age {
-              border: 1px solid var(--age-color);
-              border-radius: 4px;
-              padding: 5px;
-              font-size: 10px;
-              color: var(--age-color);
-            }
-          }
-        }
-        .synopsis > p {
-          margin-bottom: 5px;
-        }
-      }
-    }
-  }
-
-  .bookInfoSmall {
-    margin-top: 15px;
-    flex-direction: column;
-    gap: 5px;
-
-    .buttonsContainer {
-      flex-direction: row;
-
-      a {
-        width: unset;
-      }
-    }
-  }
-
-  .otherBooksContainer {
-    .bookHeader {
-      border-bottom: 1px solid #0000001f;
-    }
-
-    .otherBooks {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-
-      a {
-        margin-top: 10px;
-
-        .image {
-          width: 158px;
-
-          img {
-            max-width: 150px;
-            object-fit: cover;
-            border-radius: 8px;
-          }
+          flex-direction: column;
         }
       }
     }

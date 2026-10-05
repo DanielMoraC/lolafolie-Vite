@@ -1,39 +1,48 @@
 .sagaPage {
-  gap: 50px;
-  flex-direction: column;
-
-  .sagaHeader {
-    border-bottom: 1px solid #0000001f;
-  }
-
-  .sagaContainer {
+  .sagaHero {
+    min-height: 70dvh;
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 50px;
 
-    .books {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 20px;
+    :not(img) {
+      z-index: 2;
+      position: relative;
+    }
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .imgGradient {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background: linear-gradient(transparent, var(--background));
     }
   }
 
-  .otherSaga {
+  .sagaDescription {
+    text-align: center;
+    padding: 20px 20%;
+  }
+
+  .booksSection {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-
-    .otherSagasContainer {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .linkContainer {
-      display: flex;
-      align-items: baseline;
-      gap: 5px;
-    }
+    gap: 50px;
+    padding: 50px;
   }
 }

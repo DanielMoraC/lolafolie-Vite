@@ -1,7 +1,8 @@
 import { Link } from "react-router";
 import './hero.scss'
-import type { HeroDataComponent } from "../../types";
-import { useState } from "react";
+import type { HeroDataComponent } from "../../models/types";
+import { useEffect, useState } from "react";
+import { formatDateBook } from "../../hooks/useDate";
 
 interface HeroProps {
     heroData: HeroDataComponent
@@ -9,40 +10,47 @@ interface HeroProps {
 
 export function Hero({ heroData }: HeroProps) {
 
-    /* const [synopsis] = useState(`<p>${heroData.heroBook.synopsis.split('|', 4).join('</p><p>')}</p>`) */
-    const [synopsis] = useState(`<p>${heroData.heroBook.synopsis.split('|', 3).join('</p><p>')}</p>`)
+    const [synopsis] = useState(`<p>${heroData.heroBook.synopsis.split('|', 6).join('</p><p>')}</p>`)
+
+    const [dateFormated, setDateFormated] = useState<string>()
+
+    useEffect(() => {
+        setDateFormated(heroData?.heroBook?.publishDate && formatDateBook({ date: heroData?.heroBook?.publishDate }))
+    }, [heroData])
 
     return <>
-        <div className="hero p-6 md:p-8" style={{ background: `linear-gradient(134deg, ${heroData.colorUp}, ${heroData.colorDown})` }}>
-            <div className="info w-dvw md:w-3xl">
-                <h3 className="text-4xl md:text-5xl mb-5">ÚLTIMO LANZAMIENTO</h3>
+        <div className="hero py-6 px-6 md:py-20 md:px-20 flex-col md:flex-row gap-y-7" id="hero">
+            <div className="info">
+                <h3 className="text-md italic text-(--link-hover)">Nueva novela</h3>
 
-                <div className="img">
-                    <Link key={heroData.heroBook.title} to={`/book/${heroData.heroSaga.id}/${heroData.heroBook.id}`}>
-                        <img loading="lazy" src={heroData.heroBook.front} alt={heroData.heroBook.title} />
-                    </Link>
-                </div>
+                <h2 className="cormorant-garamond-titles font-bold">{heroData.heroBook.title}</h2>
 
-                <Link key={heroData.heroBook.title} to={`/book/${heroData.heroSaga.id}/${heroData.heroBook.id}`}
-                    className='line-clamp-2 title font-bold text-4xl md:text-5xl'>
-                    <h2>{heroData.heroBook.title}</h2>
-                </Link>
+                <h3 className="italic text-zinc-700 text-2xl mb-4">Saga &#171;{heroData.heroSaga.title}&#187;</h3>
 
-                <span className='text-(--subtitle-color) text-xl  md:text-2xl'>{heroData.heroBook.category}</span>
-                <div className='synopsis'>
+                <div className='synopsis mb-5'>
                     <p>
-                        <span className="text-lg md:text-xl" dangerouslySetInnerHTML={{ __html: synopsis }}></span>
+                        <span className="" dangerouslySetInnerHTML={{ __html: synopsis }}></span>
                     </p>
                 </div>
 
+                <span><span className="text-(--subtitle-color)">{heroData.heroBook.category}</span> · Páginas: {heroData?.heroBook?.pages} · Fecha: {dateFormated}</span>
+
                 <div className="buttonsContainer">
-                    <Link key={heroData.heroBook.amazon} to={heroData.heroBook.amazon} target="_blank">
-                        <button className='button text-neutral-50 text-xl'>
-                            <img loading="lazy" src="/amazon_ico.png" alt="Amazon" className='buttonImage' />
-                            Amazon
+                    <Link key={heroData.heroBook.id} to={`/${heroData.heroSaga.id}/${heroData.heroBook.id}`}>
+                        <button className='button text-xl primary'>
+                            Descubre más &#8594;
+                        </button>
+                    </Link>
+                    <Link key={heroData.heroSaga.id} to={`/${heroData.heroSaga.id}`}>
+                        <button className='button text-xl tertiary'>
+                            Ver saga
                         </button>
                     </Link>
                 </div>
+            </div>
+
+            <div className="img max-w-full md:max-w-35/100">
+                <img loading="lazy" src={heroData.heroBook.img} alt={heroData.heroBook.title} />
             </div>
         </div>
     </>

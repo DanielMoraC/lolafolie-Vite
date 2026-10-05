@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import type { Saga } from "../types";
+import type { Saga } from "../models/types";
 
 const path = '/config.json'
 
