@@ -2,7 +2,7 @@
 
 import { Link } from 'react-router'
 import type { Saga } from '../../models/types'
-import './sagaCard.scss'
+import './SagaCard.scss'
 
 interface CardProps {
     saga: Saga

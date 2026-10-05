@@ -1,5 +1,5 @@
 import type { Saga } from '../../models/types'
-import './sagas.scss'
+import './Sagas.scss'
 import { SagaCard } from '../SagaCard/SagaCard'
 
 interface SagasProps {
