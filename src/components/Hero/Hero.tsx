@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import 'Hero.scss'
+import './Hero.scss'
 import type { HeroDataComponent } from "../../models/types";
 import { useEffect, useState } from "react";
 import { formatDateBook } from "../../hooks/useDate";
