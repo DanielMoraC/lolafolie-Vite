@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import type { Saga, Book } from '../../models/types'
+import type { Saga } from '../../models/types'
 import { BookCard } from '../BookCard/BookCard'
 import './Books.scss'
 
