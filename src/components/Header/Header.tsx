@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router'
-import './header.scss'
+import './Header.scss'
 import type { Book, Saga } from '../../models/types';
 
 interface HeaderProps {
